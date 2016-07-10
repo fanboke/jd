@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+body {
+    font-family: 'Microsoft YaHei';
+    min-width: 300px;
+}
+
+
+/* 顶部通栏 */
+
+#topbar {
+    position: relative;
+}
+
+#topbar h3 {
+    font-weight: normal;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+/* 安全提示 */
+
+.safetip {
+    text-align: center;
+    height: 34px;
+    line-height: 34px;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.safetip p {
+    font-size: 14px;
+    text-align: center;
+    padding-left: 20px;
+    display: inline-block;
+    position: relative;
+}
+
+.safetip p::before {
+    content: "";
+    background: url(../images/safe_icon.png);
+    background-size: 18px 18px;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+
+/* 店铺区域 */
+
+#shop {}
+
+#shop > .shop-title {
+    line-height: 30px;
+    height: 30px;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+#shop > .shop-title > .pull-left {}
+
+#shop > .shop-title > .pull-left > .shop-icon {
+    width: 15px;
+    height: 13px;
+    float: left;
+    margin-top: 10px;
+}
+
+#shop > .shop-title > .pull-left > .shop-name {
+    float: left;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+#shop > .shop-title > .pull-right {
+    font-size: 12px;
+    color: #d8505c;
+    margin-right: 10px;
+}
+
+
+/* 自定义复选框 */
+
+.checkbox {
+    background: url(../images/shop-icon.png);
+    background-size: 50px 100px;
+    background-position: 0px 0;
+    width: 40px;
+    height: 34px;
+    float: left;
+    padding: 7px 10px;
+    background-origin: content-box;
+    background-clip: content-box;
+    margin-left: 0;
+}
+.checkbox[checked]{
+    background-position: -25px 0;
+}
+
+
+/* 商品区域 */
+
+.product {
+    padding: 10px 0px;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.product > .product-img {
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+
+.product-info {
+    overflow: hidden;
+    padding:0 10px;
+}
+
+.product-name {
+    font-size: 14px;
+    overflow: hidden;
+    height: 30px;
+    line-height: 15px;
+    display: block;
+}
+.product-price{
+    color: #d8505c;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.product-option{
+    margin-top: 5px;
+}
+.product-option > .pull-left > span{
+    width: 32px;
+    height: 24px;
+    float: left;
+    border:1px solid #c0c0c0;
+    text-align: center;
+}
+.product-option > .pull-left > input{
+    width: 32px;
+    height: 24px;
+    float: left;
+    border-top: 1px solid #c0c0c0;
+    border-bottom: 1px solid #c0c0c0;
+    text-align: center;
+}
+.product-option >  .pull-right span:first-child{
+    width: 20px;
+    margin-left: -1px;
+    height: 5px;
+    background: url(../images/delete_up.png);
+    background-size: 20px 5px;
+    display: block;
+}
+.product-option >  .pull-right span:last-child{
+    height: 18px;
+    width: 18px;
+    background: url(../images/delete_down.png);
+    -webkit-background-size: 18px 18px;
+    background-size: 18px 18px;
+    display: block;
+}
+#menu ul > li > a > img {
+    width: 57px;
+    height: 44px;
+}

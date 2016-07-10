@@ -1,0 +1,292 @@
+/*
+* @Author: zhengwei
+* @Date:   2016-06-22 10:54:55
+* @Last Modified by:   伊凡
+* @Last Modified time: 2016-07-06 17:11:08
+*/
+
+body {
+    font-family: 'Microsoft YaHei';
+}
+
+#layout {
+    max-width: 640px;
+    min-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+    /*height: 1000px;*/
+    background-color: #f0f0f0;
+}
+
+.topbar {
+    max-width: 640px;
+    min-width: 320px;
+    height: 40px;
+    width: 100%;
+    top: 0;
+    margin: 0 auto;
+}
+
+
+/* 头部部分 */
+
+#header {}
+
+#header > .topbar {
+    position: fixed;
+    height: 40px;
+    z-index: 1;
+}
+
+#header > .topbar >.icon-logo {
+    background: url(../images/sprites.png);
+    background-position: 0 -103px;
+    /* 图片的宽度高度比较大 */
+    /* 我们在页面上看到的高度比较小  所以我们要把背景图压缩得和我们页面需要的那么大的尺寸 */
+    /* 所以我们要把背景图压缩一倍  一半  通常都是压缩一倍 */
+    -webkit-background-size: 200px 200px;
+    background-size: 200px 200px;
+    width: 60px;
+    height: 36px;
+    position: absolute;
+    left: 10px;
+    top: 3px;
+}
+
+#header > .topbar > form {
+    width: 100%;
+    padding: 0px 50px 0px 75px;
+}
+
+#header > .topbar > form >input {
+    width: 100%;
+    height: 30px;
+    border-radius: 15px;
+    margin-top: 5px;
+    padding-left: 25px;
+}
+
+#header > .topbar > .login {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 40px;
+    width: 50px;
+    padding-left: 10px;
+    padding-top: 10px;
+    color: #fff;
+}
+
+#header > .topbar > form> .icon-search {
+    background: url(../images/sprites.png);
+    background-position: -60px -109px;
+    /* 图片的宽度高度比较大 */
+    /* 我们在页面上看到的高度比较小  所以我们要把背景图压缩得和我们页面需要的那么大的尺寸 */
+    /* 所以我们要把背景图压缩一倍  一半  通常都是压缩一倍 */
+    -webkit-background-size: 200px 200px;
+    background-size: 200px 200px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 80px;
+    top: 10px;
+}
+
+
+/* 轮播图 */
+
+#slide {
+    overflow: hidden;
+    position: relative;
+}
+
+#slide > ul:first-child {
+    width: 1000%;
+}
+
+#slide > ul:first-child > li {
+    /* width: 11.11%; */
+    float: left;
+    width: 10%;
+}
+
+#slide > ul:first-child > li > a > img {
+    width: 100%;
+    vertical-align: middle;
+}
+#slide > ul:last-child {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    margin-left: -64px;
+}
+#slide > ul:last-child > li {
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    border:1px solid #fff;
+}
+#slide > ul:last-child > li{
+    float: left;
+    margin-left: 10px;
+}
+#slide > ul:last-child > li.now {
+    background-color: #fff;
+}
+
+
+
+/*分类导航*/
+
+#category {
+    background-color: #fff;
+    padding: 5px 0px;
+}
+
+#category > ul > li {
+    width: 25%;
+    float: left;
+}
+
+#category > ul > li > a > img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+#category > ul > li > a > P {
+    margin-top: 5px;
+    font-size: 12px;
+    text-align: center;
+}
+
+#main {
+    padding: 5px;
+}
+
+
+/*商品区域*/
+
+.product {
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 5px 0px;
+}
+
+.product > .product-title {
+    line-height: 30px;
+}
+
+.product > .product-title > .pull-left {}
+
+.product > .product-title > .pull-left > .seckill-icon {
+    width: 20px;
+    height: 25px;
+    background: url("../images/seckill-icon.png");
+    background-size: 20px 25px;
+    float: left;
+    margin-left: 10px;
+}
+
+.product > .product-title > .pull-left > .seckill-name {
+    float: left;
+    font-size: 14px;
+    color: #d8505c;
+    margin-left: 10px;
+}
+
+.product > .product-title > .pull-left > .seckill-time {
+    float: left;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+
+.product > .product-title > .pull-left > .seckill-time > span {
+    background-color: #000;
+    color: #fff;
+    float: left;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    margin-left: 3px;
+    text-align: center;
+}
+
+.product > .product-title > .pull-left > .seckill-time > span:nth-child(3n) {
+    background-color: #fff;
+    color: #000;
+}
+
+.product > .product-title > h3 {
+    font-weight: normal;
+    font-size: 16px;
+    position: relative;
+    padding-left: 20px;
+    line-height: 30px;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.product > .product-title > h3::before {
+    content: "";
+    width: 3px;
+    height: 12px;
+    background-color: #d8505c;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.product > .product-title > .pull-right > .seckill-more {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.product > .product-content {}
+
+.product > .product-content > ul {
+   margin-top: 10px;
+}
+
+.product > .product-content > ul > li {
+    width: 33.33%;
+    float: left;
+}
+
+.product > .product-content > ul > li+li {
+    border-left: 1px solid #e0e0e0;
+}
+
+.product > .product-content > ul > li > a > img {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+
+.product > .product-content > ul > li > a > p {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.width-50 {
+    width: 50%;
+}
+.border-left {
+    border-left: 1px solid #c0c0c0;
+}
+.border-right {
+    border-right: 1px solid #c0c0c0;
+}
+.border-top {
+    border-top: 1px solid #c0c0c0;
+}
+.border-bottom {
+    border-bottom: 1px solid #c0c0c0;
+}
+.product-content >a > img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}

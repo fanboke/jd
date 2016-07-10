@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    /* 让移动端的盒模型包含边框  为了防止有边框的容器撑大屏幕出现横向滚动条*/
+    box-sizing: border-box;
+    /* 去掉移动端点击的高亮颜色效果如果设置成透明就看不到了 */
+    -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #333;
+}
+
+input {
+    /* 清除默认的边线 */
+    border: 0;
+    /* 清除点击的时候的边线 */
+    outline: 0;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+/* 公共的选中页面的上所有的icon- */
+
+[class^="icon-"],
+[class*=" icon-"] {
+    background: url(../images/sprites.png);
+    /* 图片的宽度高度比较大 */
+    /* 我们在页面上看到的高度比较小  所以我们要把背景图压缩得和我们页面需要的那么大的尺寸 */
+    /* 所以我们要把背景图压缩一倍  一半  通常都是压缩一倍 */
+    background-size: 200px 200px;
+}
+
+
+/* 顶部通栏 */
+
+#topbar {
+    background: url(../images/header-bg.png) repeat-x;
+    border-bottom: 1px solid #e0e0e0;
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+}
+
+#topbar > a {
+    background: url(../images/sprites.png);
+    background-size: 200px 200px;
+    width: 40px;
+    height: 44px;
+    position: absolute;
+    padding: 12px 10px;
+    -webkit-background-origin: content-box;
+    background-origin: content-box;
+    background-clip: content-box;
+}
+
+#topbar > .icon-back {
+    background-position: -20px 0;
+}
+
+#topbar > .icon-menu {
+    top: 0;
+    right: 0;
+    background-position: -60px 0;
+}
+
+
+/* 下面的菜单 */
+
+#menu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 44px;
+    background-color: #fff;
+}
+
+#menu ul > li {
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+
+#menu ul > li > a > img {
+    width: 57px;
+    height: 44px;
+}

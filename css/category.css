@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+
+html,
+body {
+    /*为什么要设置100%的高度 因为里面的盒子要100%的高度要一级一级的设置下来才能生效*/
+    height: 100%;
+}
+
+body {
+    font-family: 'Microsoft YaHei';
+}
+
+/*顶部通栏*/
+
+#topbar {
+    background: url("../images/header-bg.png") repeat-x;
+    border-bottom: 1px solid #e0e0e0;
+    position: absolute;
+    width: 100%;
+}
+
+#topbar > .icon-back {
+    background: url("../images/sprites.png");
+    background-size: 200px 200px;
+    width: 40px;
+    height: 44px;
+    position: absolute;
+    background-position: -20px 0;
+    padding: 12px 10px;
+    -webkit-background-origin: content-box;
+    background-origin: content-box;
+    background-clip: content-box;
+}
+
+#topbar > .icon-menu {
+    background: url("../images/sprites.png");
+    background-size: 200px 200px;
+    width: 40px;
+    height: 44px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-position: -60px 0;
+    padding: 12px 10px;
+    -webkit-background-origin: content-box;
+    background-origin: content-box;
+    background-clip: content-box;
+}
+
+#topbar > form {
+    padding: 0 40px;
+    /*解决margin塌陷的问题*/
+    border: 1px solid transparent;
+    height: 44px;
+}
+#topbar > form > input {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #c0c0c0;
+    margin-top: 5px;
+    border-radius: 4px;
+}
+
+
+/*分类左侧*/
+
+#category {
+    height: 100%;
+    padding-top: 45px;
+}
+
+.category-left {
+    width: 90px;
+    float: left;
+    /*设置了高度要设置隐藏溢出才能生效 才能没有滚动条*/
+    overflow: hidden;
+    height: 100%;
+}
+
+.category-left > ul > li {
+    height: 50px;
+    width: 90px;
+    background-color: #f3f4f5;
+    line-height: 50px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.category-left > ul > li > a {
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid #c0c0c0;
+    border-bottom: 1px solid #c0c0c0;
+    display: block;
+}
+
+.category-left > ul > li.now > a {
+    color: #d8505c;
+    background-color: #fff;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.category-right {
+    height: 100%;
+    /*让超出的部分隐藏 可以让这个div上来*/
+    overflow: hidden;
+}
+.category-right > .category-right-content > a {
+    padding: 10px;
+    /*因为我们要设置图片上下居中 图片撑不开a标签*/
+    display: block;
+}
+.category-right > .category-right-content> a > img {
+    width: 100%;
+}
+
+.product > .product-title > h3 {
+    font-size: 14px;
+}
+
+.product > .product-content > ul > li {
+    width: 33.33%;
+    float: left;
+}
+
+.product > .product-content > ul > li > a > img {
+    width: 62px;
+    height: 62px;
+    margin: 0 auto;
+    display: block;
+}
+
+.product > .product-content > ul > li >a >p {
+    font-size: 12px;
+    text-align: center;
+}
